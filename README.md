@@ -74,4 +74,4 @@ StandardError: Directly inheriting from ActiveRecord::Migration is not supported
 ...simply add `[5.2]` to the end of `ActiveRecord::Migration`, exactly as the
 error message instructs.
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/writing-migrations'>Writing Our Own Migrations</a> on Learn.co and start learning to code for free.</p>
+
