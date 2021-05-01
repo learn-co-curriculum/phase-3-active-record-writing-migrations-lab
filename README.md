@@ -1,6 +1,6 @@
-# Let's Write Some Migrations
+# Writing Migrations
 
-## Objectives
+## Learning Goals
 
 - Write your own migrations
 - Run a migration to create a table
