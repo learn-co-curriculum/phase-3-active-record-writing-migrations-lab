@@ -14,6 +14,10 @@ migrations. Note that in order for the tests to work, the migrations must be
 created with the file names as described below, using numbers instead of
 timestamps.
 
+Make sure to also follow proper naming conventions and use snake_case for the
+file names, and CamelCase for the class names. The names must match **exactly**
+in order for the migrations to work.
+
 ## Creating a Table
 
 The first thing we will do is create a table. In
