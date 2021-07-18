@@ -46,18 +46,22 @@ these columns to the existing file._ Let's call our new file
 `02_add_grade_and_birthdate_to_students.rb`. It should live in `db/migrate` just
 like the first migration.
 
+> **Note**: While we generally recommend using `rake db:create_migration` to create
+> the migration files, for this lab you'll need to create the file name manually
+> to ensure that the tests are able to find a file with the correct name.
+
 This new migration will look similar to the previous one. We will need a class
 that inherits from `ActiveRecord::Migration`, and we will need to define a
 change method. Sticking to conventions, name the class
 `AddGradeAndBirthdateToStudents`, since that is what we're doing (and that is
 the camel case version of the _filename_, minus the numbers in front).
 
-Inside `#change`, instead of `create_table`, we will use the `#add_column`
+Inside `#change`, instead of `#create_table`, we will use the `#add_column`
 Active Record method. It takes three necessary arguments:
 `add_column(table_name, column_name, type)`. Check the
 [Active Record Migration docs][guide-migrations] for more help with the syntax.
 
-Let's add two columns. You'll need to call `add_column` twice: once for each
+Let's add two columns. You'll need to call `#add_column` twice: once for each
 column you're adding. Add a `grade` column that is an `integer`, and a
 `birthdate` column that is a `string`.
 
@@ -84,12 +88,13 @@ before, you'll have to _create another migration file_. This time call it
 as the file but with capital letters instead of underscores:
 `ChangeDatatypeForBirthdate`.
 
-This migration will have the same setup as the last. Be sure to use the
-`change_column` method. It takes three necessary arguments:
+This migration will have the same setup as the last. Write a `#change` method,
+as usual. This time, in the `#change` method, be sure to use the
+`#change_column` method. It takes three necessary arguments:
 `change_column(table_name, column_name, type)`. Check the
 [Active Record Migration docs][guide-migrations] for more help with the syntax.
 
-After you finish defining the `change` method, run the migrations by running:
+After you finish defining the `#change` method, run the migrations by running:
 
 ```sh
 bundle exec rake db:migrate
