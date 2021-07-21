@@ -1,13 +1,15 @@
-require_relative 'spec_helper'
 require_relative '../db/migrate/01_create_students'
 require_relative '../db/migrate/02_add_grade_and_birthdate_to_students'
 
-describe 'student' do
-  before :each do
+describe AddGradeAndBirthdateToStudents do
+  before do
     sql = "DROP TABLE IF EXISTS students"
     ActiveRecord::Base.connection.execute(sql)
+
+    # Manually runs the migrations
     CreateStudents.new.change
     AddGradeAndBirthdateToStudents.new.change
+    
     Student.reset_column_information
   end
 
