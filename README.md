@@ -31,8 +31,8 @@ with a type `string`. Check the
 
 After you finish defining the `change` method, run the migrations by running:
 
-```sh
-bundle exec rake db:migrate
+```console
+$ bundle exec rake db:migrate
 ```
 
 Check the status of your migration and verify the schema was updated correctly
@@ -67,8 +67,8 @@ column you're adding. Add a `grade` column that is an `integer`, and a
 
 After you finish defining the `change` method, run the migrations by running:
 
-```sh
-bundle exec rake db:migrate
+```console
+$ bundle exec rake db:migrate
 ```
 
 Check the status of your migration and verify the schema was updated correctly
@@ -96,8 +96,8 @@ as usual. This time, in the `#change` method, be sure to use the
 
 After you finish defining the `#change` method, run the migrations by running:
 
-```sh
-bundle exec rake db:migrate
+```console
+$ bundle exec rake db:migrate
 ```
 
 Check the status of your migration and verify the schema was updated correctly
