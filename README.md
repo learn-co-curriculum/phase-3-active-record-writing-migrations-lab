@@ -15,7 +15,7 @@ created with the file names as described below, using numbers instead of
 timestamps.
 
 Make sure to also follow proper naming conventions and use snake_case for the
-file names, and CamelCase for the class names. The names must match **exactly**
+file names, and PascalCase for the class names. The names must match **exactly**
 in order for the migrations to work.
 
 ## Creating a Table
